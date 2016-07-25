@@ -34,9 +34,14 @@ function Arrow(props) {
     'L', primaryStart, secondaryEnd
   ];
 
+  /**
+   * See:
+   *   http://stackoverflow.com/questions/23402542/embedding-svg-into-reactjs
+   * particularly #answer-30579774 & #answer-33593095.
+   * If
+   */
   return (
     svg({
-      xmlns: 'http://www.w3.org/svg/2000',
       width: landscape ? secondary : primary,
       height: landscape ? primary : secondary,
       style: props.style,
